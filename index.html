@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script> 
+    <script src="https://cdn.tailwindcss.com"></script>
 
 
     <style>
-        *{
+        * {
             color: rgb(29, 28, 28);
+        }
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 0px;
         }
     </style>
 </head>
+
 <body>
-    
+
     <header class="flex items-center justify-center py-[50px]">
         <div class="container bg-[#108fd86d] h-fit px-6 py-3 rounded-lg flex justify-between items-center">
             <div>
-                <h1 class="text-3xl font-bold">Interactive</h1>
-                <h1 class="text-2xl font-serif">Geometry Genius</h1>
+                <h1 class="text-xl md:text-2xl lg:text-3xl font-bold">Interactive</h1>
+                <h1 class="text-lg md:text-xl lg:text-2xl font-serif">Geometry Genius</h1>
             </div>
             <div>
                 <button class="bg-blue-500 text-lg text-white font-medium px-7 py-1 rounded-md">Blog</button>
@@ -29,118 +36,145 @@
         </div>
     </header>
 
-    <main class="flex items-center justify-center pb-10">
-        <section class="container h-auto grid grid-cols-4 gap-4">
-            <div class="h-fit col-span-3 grid grid-cols-3 gap-4">
+    <main class="flex items-center justify-center lg:pb-10">
+        <section class="lg:container h-auto grid lg:grid-cols-4 gap-4 pb-36 sm:pb-[35svh] lg:pb-0">
+            <div
+                class="lg:col-span-3 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:overflow-y-scroll lg:h-[70svh] lg:border-solid lg:border-[1px] lg:border-gray-700 p-4 rounded-lg scroll-smooth">
 
-                <div class="h-fit p-[20px] border-solid border-[1px] border-gray-700 flex flex-col items-center justify-center rounded-lg gap-2">
+                <div class="h-fit p-[20px] border-solid border-[2px] border-gray-700 flex flex-col items-center justify-center rounded-lg gap-2">
                     <div class="w-full h-[20vh] flex justify-center items-center">
                         <img src="resources/images/triangle.png" alt="triangle" class="h-full">
                     </div>
                     <h1 class="mt-4 text-lg font-semibold">Triangle</h1>
                     <p>Area (A) = 0.5 X b X h</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="triangle-x" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <input type="number" id="triangle-x" placeholder="b"
+                            class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash('triangle')">
                         <label for="triangle-x">cm</label>
-                        <input type="number" id="triangle-y" placeholder="h" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <input type="number" id="triangle-y" placeholder="h"
+                            class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash('triangle')">
                         <label for="triangle-y">cm</label>
                     </form>
                     <div class="w-full mt-4">
-                        <button class="w-full text-white bg-blue-500 rounded-md p-2" onclick="Area('triangle')">Calculate</button>
+                        <button class="w-full text-white bg-blue-500 rounded-md p-2 hover:bg-opacity-85 active:"
+                            onclick="Area('triangle')">Calculate</button>
                     </div>
                 </div>
 
-                <div class="h-fit p-[20px] border-solid border-[1px] border-gray-700 flex flex-col items-center justify-center rounded-lg gap-2">
+                <div class="h-fit p-[20px] border-solid border-[2px] border-gray-700 flex flex-col items-center justify-center rounded-lg gap-2">
                     <div class="w-full h-[20vh] flex justify-center items-center">
                         <img src="resources/images/rectangle.png" alt="rectangle" class="h-full">
                     </div>
                     <h1 class="mt-4 text-lg font-semibold">Rectangle</h1>
                     <p>Area (A) = w X l</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="rectangle-x" placeholder="w" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <input type="number" id="rectangle-x" placeholder="w"
+                            class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash('rectangle')">
                         <label for="rectangle-x">cm</label>
-                        <input type="number" id="rectangle-y" placeholder="l" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <input type="number" id="rectangle-y" placeholder="l"
+                            class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash('rectangle')">
                         <label for="rectangle-y">cm</label>
                     </form>
                     <div class="w-full mt-4">
-                        <button class="w-full text-white bg-blue-500 rounded-md p-2" onclick="Area('rectangle')">Calculate</button>
+                        <button class="w-full text-white bg-blue-500 rounded-md p-2 hover:bg-opacity-85 active:"
+                            onclick="Area('rectangle')">Calculate</button>
                     </div>
                 </div>
 
-                <div class="h-fit p-[20px] border-solid border-[1px] border-gray-700 flex flex-col items-center justify-center rounded-lg gap-2">
+                <div
+                    class="h-fit p-[20px] border-solid border-[2px] border-gray-700 flex flex-col items-center justify-center rounded-lg gap-2">
                     <div class="w-full h-[20vh] flex justify-center items-center">
                         <img src="resources/images/parallelogram.png" alt="parallelogram" class="h-full">
                     </div>
                     <h1 class="mt-4 text-lg font-semibold">Parallelogram</h1>
                     <p>Area (A) = b X h</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="parallelogram-x" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <input type="number" id="parallelogram-x" placeholder="b"
+                            class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500"
+                            onclick="flash('parallelogram')">
                         <label for="parallelogram-x">cm</label>
-                        <input type="number" id="parallelogram-y" placeholder="h" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <input type="number" id="parallelogram-y" placeholder="h"
+                            class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500"
+                            onclick="flash('parallelogram')">
                         <label for="parallelogram-y">cm</label>
                     </form>
                     <div class="w-full mt-4">
-                        <button class="w-full text-white bg-blue-500 rounded-md p-2" onclick="Area('parallelogram')">Calculate</button>
+                        <button class="w-full text-white bg-blue-500 rounded-md p-2 hover:bg-opacity-85 active:"
+                            onclick="Area('parallelogram')">Calculate</button>
                     </div>
                 </div>
 
-                <div class="h-fit p-[20px] border-solid border-[1px] border-gray-700 flex flex-col items-center justify-center rounded-lg gap-2">
+                <div
+                    class="h-fit p-[20px] border-solid border-[2px] border-gray-700 flex flex-col items-center justify-center rounded-lg gap-2">
                     <div class="w-full h-[20vh] flex justify-center items-center">
                         <img src="resources/images/rhombus.png" alt="rhombus" class="h-full">
                     </div>
                     <h1 class="mt-4 text-lg font-semibold">Rhombus</h1>
                     <p>Area (A) = d<sub>1</sub> X d<sub>2</sub></p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="rhombus-x" placeholder="d1" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <input type="number" id="rhombus-x" placeholder="d1"
+                            class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash('rhombus')">
                         <label for="rhombus-x">cm</label>
-                        <input type="number" id="rhombus-y" placeholder="d2" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <input type="number" id="rhombus-y" placeholder="d2"
+                            class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash('rhombus')">
                         <label for="rhombus-y">cm</label>
                     </form>
                     <div class="w-full mt-4">
-                        <button class="w-full text-white bg-blue-500 rounded-md p-2" onclick="Area('rhombus')">Calculate</button>
+                        <button class="w-full text-white bg-blue-500 rounded-md p-2 hover:bg-opacity-85 active:"
+                            onclick="Area('rhombus')">Calculate</button>
                     </div>
                 </div>
-                
-                <div class="h-fit p-[20px] border-solid border-[1px] border-gray-700 flex flex-col items-center justify-center rounded-lg gap-2">
+
+                <div
+                    class="h-fit p-[20px] border-solid border-[2px] border-gray-700 flex flex-col items-center justify-center rounded-lg gap-2">
                     <div class="w-full h-[20vh] flex justify-center items-center">
                         <img src="resources/images/pentagon.png" alt="pentagon" class="h-full">
                     </div>
                     <h1 class="mt-4 text-lg font-semibold">Pentagon</h1>
                     <p>Area (A) = 0.5 X p X b</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="pentagon-x" placeholder="p" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <input type="number" id="pentagon-x" placeholder="p"
+                            class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash('pentagon')">
                         <label for="pentagon-x">cm</label>
-                        <input type="number" id="pentagon-y" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <input type="number" id="pentagon-y" placeholder="b"
+                            class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash('pentagon')">
                         <label for="pentagon-y">cm</label>
                     </form>
                     <div class="w-full mt-4">
-                        <button class="w-full text-white bg-blue-500 rounded-md p-2" onclick="Area('pentagon')">Calculate</button>
+                        <button class="w-full text-white bg-blue-500 rounded-md p-2 hover:bg-opacity-85 active:"
+                            onclick="Area('pentagon')">Calculate</button>
                     </div>
                 </div>
 
-                <div class="h-fit p-[20px] border-solid border-[1px] border-gray-700 flex flex-col items-center justify-center rounded-lg gap-2">
+                <div
+                    class="h-fit p-[20px] border-solid border-[2px] border-gray-700 flex flex-col items-center justify-center rounded-lg gap-2">
                     <div class="w-full h-[20vh] flex justify-center items-center">
                         <img src="resources/images/ellipse.png" alt="ellipse" class="h-full">
                     </div>
                     <h1 class="mt-4 text-lg font-semibold">Ellipse</h1>
                     <p>Area (A) = &#960;ab</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="ellipse-x" placeholder="a" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <input type="number" id="ellipse-x" placeholder="a"
+                            class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash('ellipse')">
                         <label for="ellipse-x">cm</label>
-                        <input type="number" id="ellipse-y" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <input type="number" id="ellipse-y" placeholder="b"
+                            class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash('ellipse')">
                         <label for="ellipse-y">cm</label>
                     </form>
                     <div class="w-full mt-4">
-                        <button class="w-full text-white bg-blue-500 rounded-md p-2" onclick="Area('ellipse')">Calculate</button>
+                        <button class="w-full text-white bg-blue-500 rounded-md p-2 hover:bg-opacity-85 active:"
+                            onclick="Area('ellipse')">Calculate</button>
                     </div>
                 </div>
 
             </div>
-            <div class="h-full rounded-lg border-solid border-[1px] border-gray-700 flex flex-col items-center p-4">
-                <p class="underline text-xl font-semibold">
+
+            <div
+                class="lg:rounded-lg border-solid border-t-[1px] lg:border-[1px] border-gray-700 flex flex-col items-center p-4 w-full sm:h-[35svh] lg:h-[70svh] fixed lg:static bottom-0 left-0 bg-white">
+                <p class="underline text-xl font-semibold hidden md:block">
                     Area Calculation
                 </p>
-                <p id="result" class="h-1/2 w-full flex flex-col items-center justify-center text-center"></p>
+                <p id="result" class="flex-1 w-full flex flex-col items-center justify-center text-center"></p>
             </div>
         </section>
     </main>
@@ -148,4 +182,5 @@
 
     <script src="areaCalculator.js"></script>
 </body>
+
 </html>

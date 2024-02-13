@@ -50,6 +50,13 @@ function Area(shape){
 
 
 
-function flash(){
+function flash(shape){
+    const shapes = ["triangle" , "rectangle", "parallelogram", "rhombus", "pentagon", "ellipse"]
+    shapes.splice(shapes.indexOf(shape),1)
+
+    for(const i of shapes){
+        document.getElementById(i+"-x").value = '';
+        document.getElementById(i+"-y").value = '';
+    }
     document.getElementById("result").innerHTML = '';
 }
