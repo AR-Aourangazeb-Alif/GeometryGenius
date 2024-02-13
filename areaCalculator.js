@@ -14,9 +14,30 @@ function Area(shape){
         area = x * y;
         formula = `${x} (w) X ${y} (l)`;
         ShapeMsg = `Rectangle`;
-    
+        
+    }else if(shape === "parallelogram"){
+        area = x * y;
+        formula = `${x} (b) X ${y} (h)`;
+        ShapeMsg = `Parallelogram`;
+        
+    }else if(shape === "rectangle"){
+        area = x * y;
+        formula = `${x} (w) X ${y} (l)`;
+        ShapeMsg = `Rectangle`;
+        
+    }else if(shape === "rectangle"){
+        area = x * y;
+        formula = `${x} (w) X ${y} (l)`;
+        ShapeMsg = `Rectangle`;
+        
+    }else if(shape === "rectangle"){
+        area = x * y;
+        formula = `${x} (w) X ${y} (l)`;
+        ShapeMsg = `Rectangle`;
         
     }
+
+
     document.getElementById("result").innerHTML = `
         <span class='text-3xl font-bold text-gray-800 mb-3'>${ShapeMsg} Area:</span>
         <span class = 'text-gray-600 mb-2'>${formula}</span>
