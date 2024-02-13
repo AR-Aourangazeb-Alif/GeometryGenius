@@ -40,13 +40,13 @@
                     <h1 class="mt-4 text-lg font-semibold">Triangle</h1>
                     <p>Area (A) = 0.5 X b X h</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="triangle-base" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
-                        <label for="triangle-base">cm</label>
-                        <input type="number" id="triangle-height" placeholder="h" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
-                        <label for="triangle-height">cm</label>
+                        <input type="number" id="triangle-x" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="triangle-x">cm</label>
+                        <input type="number" id="triangle-y" placeholder="h" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="triangle-y">cm</label>
                     </form>
                     <div class="w-full mt-4">
-                        <button class="w-full text-white bg-blue-500 rounded-md p-2" onclick="triangleArea()">Calculate</button>
+                        <button class="w-full text-white bg-blue-500 rounded-md p-2" onclick="Area('triangle')">Calculate</button>
                     </div>
                 </div>
 
@@ -57,13 +57,13 @@
                     <h1 class="mt-4 text-lg font-semibold">Rectangle</h1>
                     <p>Area (A) = w X l</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="rectangle-width" placeholder="w" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
-                        <label for="rectangle-width">cm</label>
-                        <input type="number" id="rectangle-height" placeholder="l" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
-                        <label for="rectangle-height">cm</label>
+                        <input type="number" id="rectangle-x" placeholder="w" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="rectangle-x">cm</label>
+                        <input type="number" id="rectangle-y" placeholder="l" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="rectangle-y">cm</label>
                     </form>
                     <div class="w-full mt-4">
-                        <button class="w-full text-white bg-blue-500 rounded-md p-2">Calculate</button>
+                        <button class="w-full text-white bg-blue-500 rounded-md p-2" onclick="Area('rectangle')">Calculate</button>
                     </div>
                 </div>
 
@@ -74,13 +74,13 @@
                     <h1 class="mt-4 text-lg font-semibold">Parallelogram</h1>
                     <p>Area (A) = b X h</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="parallelogram-base" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
-                        <label for="parallelogram-base">cm</label>
-                        <input type="number" id="parallelogram-height" placeholder="h" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
-                        <label for="parallelogram-height">cm</label>
+                        <input type="number" id="parallelogram-x" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="parallelogram-x">cm</label>
+                        <input type="number" id="parallelogram-y" placeholder="h" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="parallelogram-y">cm</label>
                     </form>
                     <div class="w-full mt-4">
-                        <button class="w-full text-white bg-blue-500 rounded-md p-2">Calculate</button>
+                        <button class="w-full text-white bg-blue-500 rounded-md p-2" onclick="Area('parallelogram')">Calculate</button>
                     </div>
                 </div>
 
@@ -91,13 +91,13 @@
                     <h1 class="mt-4 text-lg font-semibold">Rhombus</h1>
                     <p>Area (A) = d<sub>1</sub> X d<sub>2</sub></p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="rhombus-d1" placeholder="d1" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
-                        <label for="rhombus-d1">cm</label>
-                        <input type="number" id="rhombus-d2" placeholder="d2" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
-                        <label for="rhombus-d2">cm</label>
+                        <input type="number" id="rhombus-x" placeholder="d1" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="rhombus-x">cm</label>
+                        <input type="number" id="rhombus-y" placeholder="d2" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="rhombus-y">cm</label>
                     </form>
                     <div class="w-full mt-4">
-                        <button class="w-full text-white bg-blue-500 rounded-md p-2">Calculate</button>
+                        <button class="w-full text-white bg-blue-500 rounded-md p-2" onclick="Area('rhombus')">Calculate</button>
                     </div>
                 </div>
                 
@@ -108,13 +108,13 @@
                     <h1 class="mt-4 text-lg font-semibold">Pentagon</h1>
                     <p>Area (A) = 0.5 X p X b</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="pentagon-p" placeholder="p" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
-                        <label for="pentagon-p">cm</label>
-                        <input type="number" id="pentagon-b" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
-                        <label for="pentagon-b">cm</label>
+                        <input type="number" id="pentagon-x" placeholder="p" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="pentagon-x">cm</label>
+                        <input type="number" id="pentagon-y" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="pentagon-y">cm</label>
                     </form>
                     <div class="w-full mt-4">
-                        <button class="w-full text-white bg-blue-500 rounded-md p-2">Calculate</button>
+                        <button class="w-full text-white bg-blue-500 rounded-md p-2" onclick="Area('pentagon')">Calculate</button>
                     </div>
                 </div>
 
@@ -125,13 +125,13 @@
                     <h1 class="mt-4 text-lg font-semibold">ellipse</h1>
                     <p>Area (A) = &#960;ab</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="ellipse-a" placeholder="a" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
-                        <label for="ellipse-a">cm</label>
-                        <input type="number" id="ellipse-b" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
-                        <label for="ellipse-b">cm</label>
+                        <input type="number" id="ellipse-x" placeholder="a" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="ellipse-x">cm</label>
+                        <input type="number" id="ellipse-y" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="ellipse-y">cm</label>
                     </form>
                     <div class="w-full mt-4">
-                        <button class="w-full text-white bg-blue-500 rounded-md p-2">Calculate</button>
+                        <button class="w-full text-white bg-blue-500 rounded-md p-2" onclick="Area('ellipse')">Calculate</button>
                     </div>
                 </div>
 
