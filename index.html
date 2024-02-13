@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +7,24 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script> 
+
+
+    <style>
+        *{
+            color: rgb(29, 28, 28);
+        }
+    </style>
 </head>
 <body>
     
     <header class="flex items-center justify-center py-[50px]">
-        <div class="container bg-[#1090D8] h-fit px-6 py-3 rounded-lg flex justify-between items-center">
+        <div class="container bg-[#108fd86d] h-fit px-6 py-3 rounded-lg flex justify-between items-center">
             <div>
                 <h1 class="text-3xl font-bold">Interactive</h1>
                 <h1 class="text-2xl font-serif">Geometry Genius</h1>
             </div>
             <div>
-                <button class="bg-blue-700 text-lg text-white font-medium px-7 py-1 rounded-md">Blog</button>
+                <button class="bg-blue-500 text-lg text-white font-medium px-7 py-1 rounded-md">Blog</button>
             </div>
         </div>
     </header>
@@ -31,15 +38,15 @@
                         <img src="resources/images/triangle.png" alt="triangle" class="h-full">
                     </div>
                     <h1 class="mt-4 text-lg font-semibold">Triangle</h1>
-                    <p>Area (A) = w X l</p>
+                    <p>Area (A) = 0.5 X b X h</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="tb" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3">
-                        <label for="tb">cm</label>
-                        <input type="number" id="th" placeholder="h" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3">
-                        <label for="th">cm</label>
+                        <input type="number" id="triangle-base" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="triangle-base">cm</label>
+                        <input type="number" id="triangle-height" placeholder="h" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="triangle-height">cm</label>
                     </form>
                     <div class="w-full mt-4">
-                        <button class="w-full text-white bg-blue-500 rounded-md p-2">Calculate</button>
+                        <button class="w-full text-white bg-blue-500 rounded-md p-2" onclick="triangleArea()">Calculate</button>
                     </div>
                 </div>
 
@@ -50,10 +57,10 @@
                     <h1 class="mt-4 text-lg font-semibold">Rectangle</h1>
                     <p>Area (A) = w X l</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="rb" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3">
-                        <label for="rb">cm</label>
-                        <input type="number" id="rh" placeholder="h" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3">
-                        <label for="rh">cm</label>
+                        <input type="number" id="rectangle-width" placeholder="w" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="rectangle-width">cm</label>
+                        <input type="number" id="rectangle-height" placeholder="l" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="rectangle-height">cm</label>
                     </form>
                     <div class="w-full mt-4">
                         <button class="w-full text-white bg-blue-500 rounded-md p-2">Calculate</button>
@@ -65,12 +72,12 @@
                         <img src="resources/images/parallelogram.png" alt="parallelogram" class="h-full">
                     </div>
                     <h1 class="mt-4 text-lg font-semibold">Parallelogram</h1>
-                    <p>Area (A) = w X l</p>
+                    <p>Area (A) = b X h</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="pb" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3">
-                        <label for="pb">cm</label>
-                        <input type="number" id="ph" placeholder="h" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3">
-                        <label for="ph">cm</label>
+                        <input type="number" id="parallelogram-base" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="parallelogram-base">cm</label>
+                        <input type="number" id="parallelogram-height" placeholder="h" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="parallelogram-height">cm</label>
                     </form>
                     <div class="w-full mt-4">
                         <button class="w-full text-white bg-blue-500 rounded-md p-2">Calculate</button>
@@ -82,12 +89,12 @@
                         <img src="resources/images/rhombus.png" alt="rhombus" class="h-full">
                     </div>
                     <h1 class="mt-4 text-lg font-semibold">Rhombus</h1>
-                    <p>Area (A) = w X l</p>
+                    <p>Area (A) = d<sub>1</sub> X d<sub>2</sub></p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="rmb" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3">
-                        <label for="rmb">cm</label>
-                        <input type="number" id="rmh" placeholder="h" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3">
-                        <label for="rmh">cm</label>
+                        <input type="number" id="rhombus-d1" placeholder="d1" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="rhombus-d1">cm</label>
+                        <input type="number" id="rhombus-d2" placeholder="d2" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="rhombus-d2">cm</label>
                     </form>
                     <div class="w-full mt-4">
                         <button class="w-full text-white bg-blue-500 rounded-md p-2">Calculate</button>
@@ -99,12 +106,12 @@
                         <img src="resources/images/pentagon.png" alt="pentagon" class="h-full">
                     </div>
                     <h1 class="mt-4 text-lg font-semibold">Pentagon</h1>
-                    <p>Area (A) = w X l</p>
+                    <p>Area (A) = 0.5 X p X b</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="penb" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3">
-                        <label for="penb">cm</label>
-                        <input type="number" id="penh" placeholder="h" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3">
-                        <label for="penh">cm</label>
+                        <input type="number" id="pentagon-p" placeholder="p" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="pentagon-p">cm</label>
+                        <input type="number" id="pentagon-b" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="pentagon-b">cm</label>
                     </form>
                     <div class="w-full mt-4">
                         <button class="w-full text-white bg-blue-500 rounded-md p-2">Calculate</button>
@@ -116,12 +123,12 @@
                         <img src="resources/images/ellipse.png" alt="ellipse" class="h-full">
                     </div>
                     <h1 class="mt-4 text-lg font-semibold">ellipse</h1>
-                    <p>Area (A) = w X l</p>
+                    <p>Area (A) = &#960;ab</p>
                     <form action="" class="flex w-full gap-1.5 justify-center">
-                        <input type="number" id="eb" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3">
-                        <label for="eb">cm</label>
-                        <input type="number" id="eh" placeholder="h" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3">
-                        <label for="eh">cm</label>
+                        <input type="number" id="ellipse-a" placeholder="a" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="ellipse-a">cm</label>
+                        <input type="number" id="ellipse-b" placeholder="b" class="w-1/3 rounded-md bg-gray-300 p-1 pl-3 outline-blue-500" onclick="flash()">
+                        <label for="ellipse-b">cm</label>
                     </form>
                     <div class="w-full mt-4">
                         <button class="w-full text-white bg-blue-500 rounded-md p-2">Calculate</button>
@@ -129,13 +136,16 @@
                 </div>
 
             </div>
-            <div class="h-full rounded-lg border-solid border-[1px] border-gray-700">
-                <p class="text-center underline text-xl font-semibold">
+            <div class="h-full rounded-lg border-solid border-[1px] border-gray-700 flex flex-col items-center p-4">
+                <p class="underline text-xl font-semibold">
                     Area Calculation
                 </p>
+                <p id="result" class="h-1/2 w-full flex flex-col items-center justify-center text-center"></p>
             </div>
         </section>
     </main>
 
+
+    <script src="areaCalculator.js"></script>
 </body>
 </html>
