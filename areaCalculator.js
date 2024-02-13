@@ -20,20 +20,20 @@ function Area(shape){
         formula = `${x} (b) X ${y} (h)`;
         ShapeMsg = `Parallelogram`;
         
-    }else if(shape === "rectangle"){
+    }else if(shape === "rhombus"){
         area = x * y;
-        formula = `${x} (w) X ${y} (l)`;
-        ShapeMsg = `Rectangle`;
+        formula = `${x} (d<sub>1</sub>) X ${y} (l<sub>2</sub>)`;
+        ShapeMsg = `Rhombus`;
         
-    }else if(shape === "rectangle"){
+    }else if(shape === "pentagon"){
         area = x * y;
-        formula = `${x} (w) X ${y} (l)`;
-        ShapeMsg = `Rectangle`;
+        formula = `0.5 X ${x} (p) X ${y} (b)`;
+        ShapeMsg = `Pentagon`;
         
-    }else if(shape === "rectangle"){
+    }else if(shape === "ellipse"){
         area = x * y;
-        formula = `${x} (w) X ${y} (l)`;
-        ShapeMsg = `Rectangle`;
+        formula = `&#960; X ${x} (a) X ${y} (b)`;
+        ShapeMsg = `Ellipse`;
         
     }
 
