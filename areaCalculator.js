@@ -22,16 +22,16 @@ function Area(shape){
         
     }else if(shape === "rhombus"){
         area = x * y;
-        formula = `${x} (d<sub>1</sub>) X ${y} (l<sub>2</sub>)`;
+        formula = `${x} (d<sub>1</sub>) X ${y} (d<sub>2</sub>)`;
         ShapeMsg = `Rhombus`;
         
     }else if(shape === "pentagon"){
-        area = x * y;
+        area = 0.5 * x * y;
         formula = `0.5 X ${x} (p) X ${y} (b)`;
         ShapeMsg = `Pentagon`;
         
     }else if(shape === "ellipse"){
-        area = x * y;
+        area = Math.PI * x * y;
         formula = `&#960; X ${x} (a) X ${y} (b)`;
         ShapeMsg = `Ellipse`;
         
